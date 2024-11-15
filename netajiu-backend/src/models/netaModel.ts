@@ -1,9 +1,21 @@
 import mongoose, { Schema } from "mongoose";
 
 const netaschema = new Schema({
-  date: Schema.Types.Date,
-  activity: Schema.Types.String,
-  ref: Schema.Types.String
+  fullname: Schema.Types.String,
+  dob: {
+    date: Schema.Types.Date,
+    age: Schema.Types.Number,
+  },
+  origin: {
+    ward: Schema.Types.Number,
+    municipality: Schema.Types.String,
+    district: Schema.Types.String,
+    province: Schema.Types.String,
+    country: Schema.Types.String,
+  },
+  party: { type: Schema.Types.ObjectId, ref: "Party" },
+  summary: Schema.Types.String,
+  activity: [{ type: Schema.Types.ObjectId, ref: "NetaActivity" }],
 });
 
 export default mongoose.model("Neta", netaschema);
