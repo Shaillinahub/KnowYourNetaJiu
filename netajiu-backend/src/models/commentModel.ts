@@ -1,5 +1,12 @@
 import mongoose, { Schema } from "mongoose";
 
+export interface CommentType {
+  content: string;
+  user: string;
+  parent: string | null;
+  opinion: string;
+}
+
 const commentschema = new Schema(
   {
     content: Schema.Types.String,
