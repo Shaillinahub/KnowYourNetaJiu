@@ -35,13 +35,13 @@ export const opinion = new Elysia()
       try {
         const opinionObject = fetchOpinion.toObject();
 
-        delete opinionObject._id;
+        delete opinionObject._id!;
         let changes = generateChangeSummary(
-          opinionObject.content,
+          opinionObject.content!,
           body.content,
         );
 
-        if (changes.added) {
+        if (changes.added!) {
           let newUpdate = new OpinionVersion({
             ...opinionObject,
             ...body,
@@ -49,7 +49,7 @@ export const opinion = new Elysia()
           });
 
           newUpdate.save();
-          opinionObject.version.versions.push(newUpdate._id);
+          opinionObject!.version.versions.push(newUpdate._id);
           // console.log(newUpdate._id);
           let lastupdate = await Opinion.findByIdAndUpdate(
             id,
@@ -82,7 +82,7 @@ export const opinion = new Elysia()
             $set: {
               stats: {
                 ...fetchOpinion?.stats,
-                up: fetchOpinion?.stats.up + 1,
+                up: fetchOpinion?.stats.up! + 1,
               },
             },
           },
@@ -101,7 +101,7 @@ export const opinion = new Elysia()
             $set: {
               stats: {
                 ...fetchOpinion?.stats,
-                down: fetchOpinion?.stats.down + 1,
+                down: fetchOpinion?.stats.down! + 1,
               },
             },
           },
