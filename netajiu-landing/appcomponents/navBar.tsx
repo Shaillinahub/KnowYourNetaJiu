@@ -7,8 +7,7 @@ import { Search } from 'lucide-react'
 
 export default function Navbar() {
   return (
-    <header className="border-b bg-background">
-      <div className="container flex h-16 items-center gap-4">
+      <div className="bg-black container flex h-20 items-center gap-4 mb-8">
         <Button className="bg-blue-500 text-white hover:bg-blue-600">
           Contribute
         </Button>
@@ -54,12 +53,11 @@ export default function Navbar() {
 
           <Separator orientation="vertical" className="h-6" />
 
-          {/* <Avatar className="h-8 w-8">
+          <Avatar className="h-8 w-8">
             <AvatarImage src="/placeholder.svg?height=32&width=32" alt="User" />
             <AvatarFallback>U</AvatarFallback>
-          </Avatar> */}
+          </Avatar>
         </div>
       </div>
-    </header>
   )
 }

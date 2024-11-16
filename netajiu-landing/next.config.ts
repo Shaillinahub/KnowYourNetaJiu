@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
 
   images:{
-    domains: ["upload.wikimedia.org"]
+    domains: ["upload.wikimedia.org", "hr.parliament.gov.np"]
   }
 };
 
