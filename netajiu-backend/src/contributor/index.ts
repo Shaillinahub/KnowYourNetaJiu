@@ -1,14 +1,9 @@
 import { Elysia } from "elysia";
 import bcrypt from "bcryptjs";
-import { createClient } from "@supabase/supabase-js";
 import Contributor, { ContributorType } from "../models/contributorModel";
 import { generateTokens, storeRefreshToken } from "../utils/auth";
 import jwt from "jsonwebtoken";
 
-const supabase = createClient(
-  process.env.SUPERBASE_URL!,
-  process.env.SUPABASE_ANON_KEY!,
-);
 
 export const contributor = new Elysia()
   .post(
