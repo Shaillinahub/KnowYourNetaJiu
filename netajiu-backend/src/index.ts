@@ -3,6 +3,7 @@ import cors from "@elysiajs/cors";
 import mongoose from "mongoose";
 import "dotenv/config";
 import { neta } from "./neta";
+import { opinion } from "./opinion";
 
 mongoose
   .connect(process?.env?.DB_URL)
@@ -15,6 +16,7 @@ const app = new Elysia()
   //.group("/auth", (app) => app.use(auth))
   //.group("/user", (app) => app.use(user))
   .group("/neta", (app) => app.use(neta))
+  .group("/opinion", (app) => app.use(opinion))
   .listen(process?.env?.PORT);
 
 console.log(
