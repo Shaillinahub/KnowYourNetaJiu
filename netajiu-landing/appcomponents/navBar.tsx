@@ -1,63 +1,39 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu"
-import { Separator } from "@/components/ui/separator"
-import { Search } from 'lucide-react'
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-export default function Navbar() {
+import "./navBar.css";
+
+export default function NavBar() {
   return (
-      <div className="bg-black container flex h-20 items-center gap-4 mb-8">
-        <Button className="bg-blue-500 text-white hover:bg-blue-600">
-          Contribute
+    <div className="bg-white w-full h-16  flex  items-center px-24 py-4">
+      <nav className="navItems">
+        <Button className="button rounded-lg px-8">
+          Button
         </Button>
 
-        <NavigationMenu className="hidden md:flex">
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
-                href="/"
-              >
-                Home
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
-                href="/contact"
-              >
-                Contact
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
-                href="/vision"
-              >
-                Vision
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
-
-        <div className="ml-auto flex items-center gap-4">
-          <div className="relative">
-            <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
-            <Input
-              type="search"
-              placeholder="Search"
-              className="w-[200px] pl-8"
-            />
+        <div className="navLinks flex justify-center w-full h-full">
+          <div className="navItem">
+            <a href="">Home</a>
           </div>
 
-          <Separator orientation="vertical" className="h-6" />
+          <div className="navItem">
+            <a href="">Contact</a>
+          </div>
 
-          <Avatar className="h-8 w-8">
-            <AvatarImage src="/placeholder.svg?height=32&width=32" alt="User" />
-            <AvatarFallback>U</AvatarFallback>
+          <div className="navItem">
+            <a href="">Vision</a>
+          </div>
+        </div>
+
+        <div className="rightNav flex flex-row w-1/2 mx-2 justify-between">
+          <Input className="w-2/3 justify-center" type="search  " placeholder="Search" />
+          <Avatar>
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>CN</AvatarFallback>
           </Avatar>
         </div>
-      </div>
-  )
+      </nav>
+    </div>
+  );
 }

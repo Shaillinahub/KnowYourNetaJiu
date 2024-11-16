@@ -1,21 +1,11 @@
-"use client";
-
-
+import React from "react";
 import { Button } from "@/components/ui/button"
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible"
-import { Plus } from 'lucide-react'
-import { useState } from "react"
 
 export default function Footer() {
-  const [isOpen, setIsOpen] = useState(false)
+  return <div>
 
-  return (
-    <footer className="bg-black text-white py-16 mt-8">
-      <div className="container mx-auto px-4">
+    <div className="bg-black text-white">
+      <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           <div className="space-y-6">
             <h2 className="text-5xl font-bold leading-tight">
@@ -39,29 +29,6 @@ export default function Footer() {
             </p>
           </div>
         </div>
-
-        <div className="mt-16">
-          <Collapsible
-            open={isOpen}
-            onOpenChange={setIsOpen}
-            className="w-full"
-          >
-            <CollapsibleTrigger className="flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors">
-              <span>Disclaimer</span>
-              <Plus
-                className={`h-4 w-4 transition-transform duration-200 ${
-                  isOpen ? "rotate-45" : ""
-                }`}
-              />
-            </CollapsibleTrigger>
-            <CollapsibleContent className="mt-4 text-gray-400">
-              <p>
-                This is the disclaimer content. Add your disclaimer text here.
-              </p>
-            </CollapsibleContent>
-          </Collapsible>
-        </div>
       </div>
-    </footer>
-  )
+    </div></div>;
 }

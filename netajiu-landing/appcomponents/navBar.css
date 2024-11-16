@@ -1,0 +1,24 @@
+.navItems {
+    display: flex;
+    width: 100%;
+    justify-content: space-;
+    align-items: center;
+  }
+  
+  .button {
+    background-color: #48B5EC;
+  }
+  
+  .navItem {
+    /* background-color: rgb(255, 0, 0); */
+    border-radius: var(--radius);
+    padding: 0.5rem 2.5rem;
+    margin: 2rem;
+  
+  }
+  
+  .navItem:hover {
+    background-color: #dedede;
+    cursor: pointer;
+  }
+  
