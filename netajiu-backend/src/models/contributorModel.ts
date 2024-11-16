@@ -21,7 +21,7 @@ const contributorschema = new Schema(
     refreshToken: Schema.Types.String,
     photo: { type: Schema.Types.String, default: "" },
     bio: Schema.Types.String,
-    document: { type: Schema.Types.String, default: "" ,
+    document: { type: Schema.Types.String, default: "" },
     alias: Schema.Types.String,
   },
   { timestamps: true },

@@ -178,7 +178,6 @@ export const contributor = new Elysia()
         const documentUrl = "public/profile_picture/" + body.userId + ".png";
 
         Bun.write(documentUrl, body.file);
-        // Update user profile with photo URL
         await Contributor.findByIdAndUpdate(body.userId, {
           document: documentUrl,
         });
