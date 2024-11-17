@@ -1,0 +1,14 @@
+.loginform_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    /* min-height: 100vh; */
+    padding: 2rem;
+}
+
+.loginform_container img {
+    height: 10rem;
+    width: 22rem;
+}

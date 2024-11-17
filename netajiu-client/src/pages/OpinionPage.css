@@ -1,0 +1,12 @@
+.opinionPage_container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.opinion_container {
+    width: 72%;
+}

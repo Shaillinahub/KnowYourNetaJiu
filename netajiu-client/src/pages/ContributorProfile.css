@@ -1,12 +1,9 @@
 .contributor_profile {
     padding: 2rem;
     display: flex;
-    gap: 5rem;
-}
-
-.contributor_profile_left {
-    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     gap: 1rem;
 }
 
@@ -17,7 +14,7 @@
     align-items: center;
     justify-content: center;
     padding: 3rem;
-    width: 70%;
+    width: 80%;
 }
 
 .avatar_container {
@@ -27,10 +24,33 @@
 
 .stats_container {
     background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
+    gap: 2rem;
     /* align-items: center; */
     /* justify-content: center; */
-    padding: 3rem;
-    width: 70%;
+    width: 80%;
+}
+
+.stat_block_container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 1rem 0;
+}
+
+.stat_block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.opinion_block_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.opinion_block {
+    width: 32%;
+    background-color: #f6f6f6;
+    padding: 1rem;
 }
