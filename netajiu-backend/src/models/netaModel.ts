@@ -2,6 +2,9 @@ import mongoose, { Schema } from "mongoose";
 
 const netaschema = new Schema({
   fullname: Schema.Types.String,
+  photo: Schema.Types.String,
+  status: Schema.Types.String,
+  gender: Schema.Types.String,
   dob: {
     date: Schema.Types.Date,
     age: Schema.Types.Number,
