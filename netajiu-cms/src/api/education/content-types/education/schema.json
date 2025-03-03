@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "educations",
+  "info": {
+    "singularName": "education",
+    "pluralName": "educations",
+    "displayName": "Education"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "degree": {
+      "type": "string",
+      "required": true
+    },
+    "institution": {
+      "type": "string",
+      "required": true
+    },
+    "since": {
+      "type": "date",
+      "required": true
+    },
+    "till": {
+      "type": "date",
+      "required": true
+    },
+    "ref": {
+      "type": "text"
+    },
+    "neta": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::neta.neta",
+      "inversedBy": "education"
+    }
+  }
+}

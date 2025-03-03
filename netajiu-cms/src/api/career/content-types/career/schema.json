@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "careers",
+  "info": {
+    "singularName": "career",
+    "pluralName": "careers",
+    "displayName": "Career"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "company": {
+      "type": "string",
+      "required": true
+    },
+    "since": {
+      "type": "date",
+      "required": true
+    },
+    "till": {
+      "type": "date",
+      "required": true
+    },
+    "ref": {
+      "type": "text",
+      "required": true
+    },
+    "neta": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::neta.neta",
+      "inversedBy": "career"
+    }
+  }
+}

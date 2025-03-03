@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "histories",
+  "info": {
+    "singularName": "history",
+    "pluralName": "histories",
+    "displayName": "History"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "activity": {
+      "type": "text",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "ref": {
+      "type": "text"
+    },
+    "neta": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::neta.neta",
+      "inversedBy": "history"
+    }
+  }
+}
