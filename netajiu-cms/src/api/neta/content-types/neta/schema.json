@@ -59,6 +59,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::social.social"
+    },
+    "constituency": {
+      "type": "string"
     }
   }
 }

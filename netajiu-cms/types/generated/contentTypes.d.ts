@@ -478,6 +478,7 @@ export interface ApiNetaNeta extends Struct.CollectionTypeSchema {
   };
   attributes: {
     career: Schema.Attribute.Relation<'oneToMany', 'api::career.career'>;
+    constituency: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

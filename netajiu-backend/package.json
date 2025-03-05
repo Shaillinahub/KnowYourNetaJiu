@@ -8,17 +8,25 @@
   "dependencies": {
     "@elysiajs/bearer": "^1.1.2",
     "@elysiajs/cors": "^1.1.1",
-    "@supabase/supabase-js": "^2.46.1",
+    "@elysiajs/swagger": "^1.2.2",
+    "@grotto/logysia": "^0.1.6",
     "@types/bcryptjs": "^2.4.6",
     "@types/jsonwebtoken": "^9.0.7",
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.40.0",
     "elysia": "latest",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.8.1"
+    "lodash": "^4.17.21",
+    "mongoose": "^8.8.1",
+    "pg": "^8.13.3",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "@types/lodash": "^4.17.16",
+    "@types/pg": "^8.11.11",
+    "bun-types": "latest",
+    "drizzle-kit": "^0.30.5"
   },
   "module": "src/index.js"
 }
